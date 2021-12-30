@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter_budget_ui/models/category_model.dart';
-import 'package:flutter_budget_ui/models/expense_model.dart';
+import 'package:untitled/models/category_model.dart';
+import 'package:untitled/models/expense_model.dart';
 
 final rand = Random();
 
@@ -37,3 +37,5 @@ List<Category> categories = [
       name: 'Transportation', maxAmount: 500, expenses: _generateExpenses()),
   Category(name: 'Housing', maxAmount: 1000, expenses: _generateExpenses()),
 ];
+
+List<String> Label = ['Su', 'Mu', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
