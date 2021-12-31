@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BarCharts extends StatelessWidget {
@@ -14,19 +13,19 @@ class BarCharts extends StatelessWidget {
       }
     });
     return Padding(
-      padding: EdgeInsets.all(15.0),
+      padding: EdgeInsets.only(top: 10, bottom: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Weekly Spending',
             style: TextStyle(
                 letterSpacing: 1.2, fontWeight: FontWeight.bold, fontSize: 24),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
               IconButton(
                   onPressed: null, icon: Icon(Icons.arrow_back, size: 30)),
               Text(
@@ -103,20 +102,20 @@ class Bar extends StatelessWidget {
       children: [
         Text(
           '\$${amountSpent.toStringAsFixed(2)}',
-          style: TextStyle(fontWeight: FontWeight.w600),
+          style: const TextStyle(fontWeight: FontWeight.w400),
         ),
-        SizedBox(height: 6),
+        const SizedBox(height: 6),
         Container(
           height: barHeight,
-          width: 18,
+          width: 15,
           decoration: BoxDecoration(
               color: Theme.of(context).primaryColor,
               borderRadius: BorderRadius.circular(6)),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Text(
           label,
-          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+          style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
         ),
       ],
     );
